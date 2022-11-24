@@ -9,7 +9,7 @@
 <body bgcolor="#112337">
 <?php require_once('../general/barre_nav.php');
 require_once'../connexion/config.php'?>
-Selectionner une animation:
+<!-- Selectionner une animation:
 <select name="animation" id="animation" data-target="animation" data-url="animation.php" class="ajaxTab">
 <?php
 	$sql ="SELECT CODEANIM, NOMANIM FROM animation";
@@ -18,7 +18,7 @@ Selectionner une animation:
 		echo "<option value=$row[CODEANIM]>$row[NOMANIM]</option>";
 	}
 ?>
-</select>
+</select> -->
 <table>
 	<tr>
 		<td>code de l'animation correspondante</td>
@@ -36,16 +36,21 @@ Selectionner une animation:
 <?php
 	$result = $bdd->query("SELECT * FROM activite");
 	while ($act=$result->fetch()) {
+		$date= new DateTime($act["DATEACT"]);
+		$datefin= new DateTime($act["DATEANNULEACT"]);
+		$hrdv= new DateTime($act["HRRDVACT"]);
+		$hdebut= new DateTime($act["HRDEBUTACT"]);
+		$hfin= new DateTime($act["HRFINACT"]);
 ?>
 	<tr>
 		<td><?=$act["CODEANIM"];?></td>
-		<td><?=$act["DATEACT"];?></td>
+		<td><?=$date->format("d/m/Y");?></td>
 		<td><?=$act["CODEETATACT"];?></td>
-		<td><?=$act["HRRDVACT"];?></td>
+		<td><?=$hrdv->format("h:i");?></td>
 		<td><?=$act["PRIXACT"];?></td>
-		<td><?=$act["HRDEBUTACT"];?></td>
-		<td><?=$act["HRFINACT"];?></td>
-		<td><?=$act["DATEANNULEACT"];?></td>
+		<td><?=$hdebut->format("h:i");?></td>
+		<td><?=$hfin->format("h:i");?></td>
+		<td><?=$datefin->format("d/m/Y");?></td>
 		<td><?=$act["NOMRESP"];?></td>
 		<td><?=$act["PRENOMRESP"];?></td>
 		<td><a href="supract.php?DATEACT=<?=$act["DATEACT"];?>"><button>supprimer</button></a></td>

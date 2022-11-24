@@ -13,7 +13,7 @@ if(isset($_GET['DATEACT']) AND ! empty($_GET['DATEACT']))
 	}
 	else
 	{
-		echo "aaa";
+		echo "L'identifiant non existant";
 	}
 }
 else
