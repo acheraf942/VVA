@@ -1,0 +1,198 @@
+body
+{
+	font-family: Verdana, Calibri, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+img
+{
+  display: none;
+}
+nav>ul
+{
+	margin-top: 0px;
+	padding: 15px;
+	border-bottom: 4px solid #00d8e9;
+}
+nav li
+{
+	list-style-type:none ;
+}
+
+nav>ul>li
+{
+	float: left;
+	position: relative ;
+	padding:0px ;
+}
+.submenu
+{
+	display: none;
+}
+
+nav input[type=checkbox]
+{
+	display: none;
+}
+
+
+
+nav
+{
+	width: 100%;
+	background-color: #112337;
+}
+
+nav>ul::after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+nav a
+{
+	display: inline-block;
+	text-decoration:none ;
+}
+nav>ul>li>a
+{
+	color: #FFF;
+}
+
+nav li:hover .submenu
+{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
+	transition: 0.5s;
+	padding-top: 32px;
+
+
+}
+.submenu li
+{
+	transition: 0.5s;
+	animation: fadeIn ease .8s;
+}
+
+.submenu li a
+{
+	padding: 15px 30px;
+	font-size: 15px;
+	color: white;
+	width: 270px;
+	transition: 0.5;
+	border-bottom: 2px solid #00d8e9;
+}
+
+.menu-html
+{
+	transition: 0.5s;
+
+}
+.menu-html:hover
+{
+	background-color: #1A3350;
+	transition: 0.5s;
+}
+.submenu li:hover a
+{
+	color: #112337;
+	background-color: #00d8e9;
+	transition: 0.5s;
+}
+.menu-html .submenu li:hover
+{
+	background-color: #00d8e9;
+	transition: 0.5s;
+
+}
+nav input[type=checkbox]:checked ~ ul
+{
+	display: block;
+}
+
+.partie
+{	
+	font-size: 15px;
+	padding: 20px;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+
+.pop
+{
+	color: white;
+	font-family: verdana;
+	font-size: 2vmax;
+	text-align: center;
+	animation: fadeIn ease 2.5s;
+}
+@keyframes fadeIn
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+a
+{
+	float: right;
+}
+button
+{
+	color: #00d8e9;
+	font-family: verdana;
+	font-size: 15px;
+	margin-right: 1vw;
+	background: transparent;
+	cursor: pointer;
+	border: 2px solid #00d8e9;
+	border-radius: 5px;
+	text-decoration: None;
+	posittion:  relative;
+	padding-right: 1vw;
+	padding-left: 1vw;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	transition: .5s all;
+}
+
+button:hover 
+{
+	background-color: #00d8e9;
+	color: #112337;
+}
+
+header
+{
+	position: sticky;
+	top:  0;
+}
+
+.ajt
+{
+	color: white;
+	margin-left: 30vw;
+	margin-right:30vw;
+	padding: 3vw;
+	margin-top: 5vw;
+}
+table
+{
+	margin:  auto;
+}
+td
+{
+	padding: 5px;
+}
+h3
+{
+	text-align: center;
+}
